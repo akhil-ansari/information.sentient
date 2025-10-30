@@ -7,10 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
     body {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Orbitron', monospace;
       overflow-x: hidden;
       background: radial-gradient(circle at 20% 80%, #0f0f23 0%, #1a0033 50%, #000 100%);
       background-attachment: fixed;
@@ -26,23 +25,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      padding: 1rem;
     }
     .bubble:hover {
       transform: scale(1.15) rotate(8deg);
       box-shadow: 0 30px 60px rgba(138,43,226,0.6), 0 0 50px #00ffff;
       animation: pulse 1s infinite;
-    }
-
-    .bubble-content {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.4s ease;
-      text-align: center;
-      padding: 1rem;
-    }
-    .bubble:hover .bubble-content {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     @keyframes float {
@@ -85,7 +74,7 @@
       <i class="fas fa-brain mr-4"></i> Sentient Bubbles
     </h1>
     <p class="text-xl md:text-2xl text-cyan-300 mb-8 max-w-2xl mx-auto">
-      <strong>Open-Source AGI Ecosystem</strong> | <strong>$85M Funded</strong> | <strong>GRID + ROMA + OML</strong> | <strong>TGE SOON 🚀</strong>
+      **Open-Source AGI Ecosystem** | **$85M Funded** | **GRID + ROMA + OML** | **TGE SOON** 🚀
     </p>
     <a href="#join" class="connect-btn px-12 py-4 rounded-full text-xl font-bold inline-block">
       <i class="fab fa-discord mr-2"></i> Join 50K+ Builders
@@ -97,55 +86,55 @@
     
     <!-- Mission -->
     <div class="bubble w-60 h-60 bg-gradient-to-r from-purple-600/80 to-indigo-600/80">
-      <div class="bubble-content">
+      <div>
         <i class="fas fa-bullseye text-4xl text-yellow-400 mb-2"></i>
         <h3 class="text-2xl font-bold mb-2">Mission</h3>
-        <p class="text-sm opacity-90">Community-owned AGI. Open, Loyal, Monetizable.<br><span class="text-cyan-300">No corps control.</span></p>
+        <p class="text-sm opacity-90">“To ensure Artificial General Intelligence is open source and not controlled by any single entity.”<br><span class="text-cyan-300">— X (formerly Twitter)</span></p>
       </div>
     </div>
 
     <!-- Vision -->
     <div class="bubble w-60 h-60 bg-gradient-to-r from-indigo-600/80 to-blue-600/80">
-      <div class="bubble-content">
+      <div>
         <i class="fas fa-eye text-4xl text-green-400 mb-2"></i>
         <h3 class="text-2xl font-bold mb-2">Vision</h3>
-        <p class="text-sm opacity-90">Loyal AI for Humanity – Decentralized agents + models.<br><span class="text-purple-300">110+ Partners.</span></p>
+        <p class="text-sm opacity-90">“Aligning AI innovations toward a community built open AGI.”<br><span class="text-cyan-300">— X (formerly Twitter)</span></p>
       </div>
     </div>
 
-    <!-- Funding -->
-    <div class="bubble w-56 h-56 bg-gradient-to-r from-green-600/80 to-emerald-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-dollar-sign text-4xl text-lime-400 mb-2"></i>
-        <h3 class="text-xl font-bold mb-2">Funding</h3>
-        <p class="text-xs opacity-90"><strong>$85M Seed</strong><br>Founders Fund • Pantera • Framework</p>
+    <!-- Ownership & Incentives -->
+    <div class="bubble w-60 h-60 bg-gradient-to-r from-green-600/80 to-emerald-600/80">
+      <div>
+        <i class="fas fa-coins text-4xl text-lime-400 mb-2"></i>
+        <h3 class="text-xl font-bold mb-2">Ownership & Incentives</h3>
+        <p class="text-sm opacity-90">“Users stake $SENT, direct emissions and earn yield in a community driven intelligence economy.”<br><span class="text-cyan-300">— sentient.foundation</span></p>
       </div>
     </div>
 
-    <!-- Team -->
+    <!-- Network -->
     <div class="bubble w-72 h-72 bg-gradient-to-r from-orange-600/80 to-red-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-users text-4xl text-orange-400 mb-2"></i>
-        <h3 class="text-2xl font-bold mb-2">Team</h3>
-        <p class="text-sm opacity-90">Polygon, Princeton, MIT, and 50+ builders.</p>
+      <div>
+        <i class="fas fa-network-wired text-4xl text-orange-400 mb-2"></i>
+        <h3 class="text-2xl font-bold mb-2">Network</h3>
+        <p class="text-sm opacity-90">“The GRID: a distributed network of agents, models and data collaborating as one unified system.”<br><span class="text-cyan-300">— sentient.foundation</span></p>
       </div>
     </div>
 
-    <!-- TGE -->
+    <!-- Team & Partnerships -->
     <div class="bubble w-64 h-64 bg-gradient-to-r from-pink-600/80 to-rose-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-rocket text-4xl text-pink-400 mb-2 tge-badge"></i>
-        <h3 class="text-2xl font-bold mb-2">TGE NOV 2025</h3>
-        <p class="text-sm opacity-90 text-yellow-300">Blockbuster Launch • $SENT Staking • Alpha: SOON</p>
+      <div>
+        <i class="fas fa-users text-4xl text-pink-400 mb-2"></i>
+        <h3 class="text-2xl font-bold mb-2">Team & Partnerships</h3>
+        <p class="text-sm opacity-90">“110+ partners, agents, data providers and compute infrastructure firms committed to open AGI scale.”<br><span class="text-cyan-300">— sentient.foundation</span></p>
       </div>
     </div>
 
-    <!-- Products -->
+    <!-- Product Ecosystem -->
     <div class="bubble w-72 h-72 bg-gradient-to-r from-cyan-600/80 to-teal-600/80">
-      <div class="bubble-content">
+      <div>
         <i class="fas fa-cogs text-4xl text-cyan-400 mb-2"></i>
-        <h3 class="text-2xl font-bold mb-2">Products</h3>
-        <p class="text-sm opacity-90">ROMA • OML Fingerprint • Sentient Chat • Dobby</p>
+        <h3 class="text-2xl font-bold mb-2">Product Ecosystem</h3>
+        <p class="text-sm opacity-90">“Building open source AGI infrastructure where intelligence is community-owned, transparent and accessible.”<br><span class="text-cyan-300">— X (formerly Twitter)</span></p>
       </div>
     </div>
   </div>
@@ -162,3 +151,4 @@
   </div>
 </body>
 </html>
+
