@@ -1,176 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sentient Bubbles – Open AGI Revolution</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentient Bubbles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
     body {
-      font-family: 'Orbitron', monospace;
-      overflow-x: hidden;
-      background: radial-gradient(circle at 20% 80%, #0f0f23 0%, #1a0033 50%, #000 100%);
-      background-attachment: fixed;
+      font-family: "Orbitron", sans-serif;
+      background: radial-gradient(circle at center, #080014 0%, #000 100%);
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
     .bubble {
+      position: absolute;
       border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      box-shadow: 0 20px 40px rgba(0,255,255,0.3), inset 0 0 20px rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      animation: float 6s ease-in-out infinite;
+      text-align: center;
       display: flex;
-      justify-content: center;
       align-items: center;
-    }
-    .bubble:hover {
-      transform: scale(1.15) rotate(8deg);
-      box-shadow: 0 30px 60px rgba(138,43,226,0.6), 0 0 50px #00ffff;
-      animation: pulse 1s infinite;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-transform: uppercase;
+      animation: float 8s ease-in-out infinite;
     }
 
-    .bubble-content {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.4s ease;
-      text-align: center;
-      padding: 1rem;
-    }
-    .bubble:hover .bubble-content {
-      opacity: 1;
-      transform: translateY(0);
+    .bubble:hover {
+      transform: scale(1.4);
+      z-index: 20;
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 30px 60px rgba(138,43,226,0.6), 0 0 50px #00ffff; }
-      50% { box-shadow: 0 40px 80px rgba(138,43,226,0.8), 0 0 80px #00ffff; }
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0px); }
     }
 
-    .tge-badge {
-      background: linear-gradient(45deg, #ff00ff, #00ffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmer 2s infinite;
+    /* Glow effect */
+    .bubble::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      box-shadow: 0 0 25px 10px currentColor;
+      opacity: 0.4;
+      z-index: -1;
     }
 
-    @keyframes shimmer {
-      0% { background-position: 0%; }
-      100% { background-position: 200%; }
+    /* Bubble colors */
+    .mission { background: rgba(0, 255, 200, 0.2); color: #00ffc8; top: 20%; left: 15%; }
+    .funding { background: rgba(255, 0, 150, 0.2); color: #ff0096; top: 40%; right: 20%; }
+    .team { background: rgba(0, 100, 255, 0.2); color: #009cff; bottom: 25%; left: 25%; }
+    .expected { background: rgba(255, 255, 0, 0.2); color: #ffff00; top: 30%; right: 40%; }
+    .vision { background: rgba(255, 100, 0, 0.2); color: #ff6400; bottom: 15%; right: 30%; }
+    .product { background: rgba(0, 255, 100, 0.2); color: #00ff64; top: 60%; left: 50%; }
+
+    .bubble {
+      width: 140px;
+      height: 140px;
     }
 
-    .connect-btn {
-      background: linear-gradient(45deg, #8a2be2, #00ffff);
-      transition: all 0.3s;
-    }
-    .connect-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px #00ffff;
-    }
   </style>
 </head>
-
-<body class="min-h-screen text-white flex flex-col justify-center items-center p-8 relative">
-
-  <!-- HERO -->
-  <div class="text-center z-20 mb-20">
-    <h1 class="text-6xl md:text-7xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-4 animate-pulse">
-      <i class="fas fa-brain mr-4"></i> Sentient Bubbles
-    </h1>
-    <p class="text-xl md:text-2xl text-cyan-300 mb-8 max-w-2xl mx-auto">
-      **Open-Source AGI Ecosystem** | **$85M Funded** | **GRID + ROMA + OML** | **TGE SOON** 🚀
-    </p>
-    <a href="#join" class="connect-btn px-12 py-4 rounded-full text-xl font-bold inline-block">
-      <i class="fab fa-discord mr-2"></i> Join 50K+ Builders
-    </a>
-  </div>
-
-  <!-- GALAXY GRID (No Overlap) -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 place-items-center w-full max-w-6xl mb-32">
-    
-    <!-- Bubble 1 -->
-    <div class="bubble w-60 h-60 bg-gradient-to-r from-purple-600/80 to-indigo-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-bullseye text-4xl text-yellow-400 mb-2"></i>
-        <h3 class="text-2xl font-bold mb-2">Mission</h3>
-        <p class="text-sm opacity-90">Community-owned AGI. Open, Loyal, Monetizable.<br><span class="text-cyan-300">No corps control.</span></p>
-      </div>
-    </div>
-
-    <!-- Bubble 2 -->
-    <div class="bubble w-60 h-60 bg-gradient-to-r from-indigo-600/80 to-blue-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-eye text-4xl text-green-400 mb-2"></i>
-        <h3 class="text-2xl font-bold mb-2">Vision</h3>
-        <p class="text-sm opacity-90">Loyal AI for Humanity – Decentralized agents + models.<br><span class="text-purple-300">110+ Partners.</span></p>
-      </div>
-    </div>
-
-    <!-- Bubble 3 -->
-    <div class="bubble w-56 h-56 bg-gradient-to-r from-green-600/80 to-emerald-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-dollar-sign text-4xl text-lime-400 mb-2"></i>
-        <h3 class="text-xl font-bold mb-2">Funding</h3>
-        <p class="text-xs opacity-90">**$85M Seed**<br>Founders Fund • Pantera • Framework</p>
-      </div>
-    </div>
-
-    <!-- Bubble 4 -->
-    <div class="bubble w-72 h-72 bg-gradient-to-r from-orange-600/80 to-red-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-users text-4xl text-orange-400 mb-2"></i>
-        <h3 class="text-2xl font-bold mb-2">Team</h3>
-        <p class="text-sm opacity-90">Polygon, Princeton, MIT, and 50+ builders.</p>
-      </div>
-    </div>
-
-    <!-- Bubble 5 -->
-    <div class="bubble w-64 h-64 bg-gradient-to-r from-pink-600/80 to-rose-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-rocket text-4xl text-pink-400 mb-2 tge-badge"></i>
-        <h3 class="text-2xl font-bold mb-2">TGE NOV 2025</h3>
-        <p class="text-sm opacity-90 text-yellow-300">Blockbuster Launch • $SENT Staking • Alpha: SOON</p>
-      </div>
-    </div>
-
-    <!-- Bubble 6 -->
-    <div class="bubble w-72 h-72 bg-gradient-to-r from-cyan-600/80 to-teal-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-cogs text-4xl text-cyan-400 mb-2"></i>
-        <h3 class="text-2xl font-bold mb-2">Products</h3>
-        <p class="text-sm opacity-90">ROMA • OML Fingerprint • Sentient Chat • Dobby</p>
-      </div>
-    </div>
-
-    <!-- Bubble 7 -->
-    <div class="bubble w-56 h-56 bg-gradient-to-r from-yellow-600/80 to-amber-600/80">
-      <div class="bubble-content">
-        <i class="fas fa-share-alt text-4xl text-yellow-400 mb-2"></i>
-        <h3 class="text-xl font-bold mb-2">Socials</h3>
-        <p class="text-sm">
-          <a href="https://x.com/SentientAGI" class="text-cyan-300 hover:text-white"><i class="fab fa-x-twitter"></i> @SentientAGI</a><br>
-          <a href="https://discord.gg/sentient" class="text-purple-300 hover:text-white"><i class="fab fa-discord"></i> Discord</a><br>
-          <a href="https://sentient.foundation" class="text-green-300 hover:text-white"><i class="fas fa-globe"></i> sentient.foundation</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA FOOTER -->
-  <div id="join" class="text-center z-20 mb-20">
-    <h2 class="text-4xl font-black mb-8 tge-badge">Ready for $SENT Airdrop?</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <a href="https://discord.gg/sentient" class="connect-btn p-6 text-2xl rounded-full"><i class="fab fa-discord mr-3"></i> Join Discord</a>
-      <a href="https://x.com/SentientAGI" class="connect-btn p-6 text-2xl rounded-full"><i class="fab fa-x-twitter mr-3"></i> Follow X</a>
-      <a href="https://sentient.foundation" class="connect-btn p-6 text-2xl rounded-full"><i class="fas fa-rocket mr-3"></i> Explore GRID</a>
-    </div>
-    <p class="mt-8 text-lg text-gray-300">gSenti to the Moon 🧠✨ TGE Loading...</p>
-  </div>
+<body>
+  <div class="bubble mission">Mission</div>
+  <div class="bubble funding">Funding</div>
+  <div class="bubble team">Team</div>
+  <div class="bubble expected">Expected TGE</div>
+  <div class="bubble vision">Vision</div>
+  <div class="bubble product">Product</div>
 </body>
 </html>
+
